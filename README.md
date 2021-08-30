@@ -1,7 +1,7 @@
 # IDOR-bypass-fuzz
 IDOR bypass fuzz 权限绕过burp 插件 fuzz （shiro 等）
 
-具体实现：获取所有code:200,302请求, 全部去掉cookie进行请求, 返回码除了200，400，503，500,全部进行IDOR fuzz测试,出现返回code:200输出payload。
+具体实现：获取所有code:200,302请求, 全部去掉cookie进行请求, 返回码除了200全部进行IDOR fuzz测试,出现返回code:200输出payload。
 
 ![image](https://user-images.githubusercontent.com/50195525/131288882-17babc23-4c79-49bb-a6f8-63ed6aa7b86b.png)
 
