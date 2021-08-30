@@ -30,7 +30,7 @@ class BurpExtender(IBurpExtender, IScannerCheck):
 
     def _get_matches(self, sttcode):
         #response = self._helpers.bytesToString(response)
-        if sttcode == 200:
+        if sttcode == 200 or sttcode == 302:
             return True
         return False
 
