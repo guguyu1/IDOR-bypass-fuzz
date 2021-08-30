@@ -45,7 +45,7 @@ class BurpExtender(IBurpExtender, IScannerCheck):
         OldReq1 = OldReq.replace("Cookie: ", "text: ")
         checkRequestcode1 = self._callbacks.makeHttpRequest(baseRequestResponse.getHttpService(), self._helpers.stringToBytes(OldReq1))
         STT1_CODE = self._helpers.analyzeResponse(checkRequestcode1.getResponse()).getStatusCode()
-        if STT1_CODE == 200 or STT1_CODE == 400 or STT1_CODE == 500 or STT1_CODE == 503 :
+        if STT1_CODE == 200:
             return None
 
         Rurl = self._helpers.analyzeRequest(baseRequestResponse).getUrl().getPath().rstrip("/")
